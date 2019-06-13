@@ -4,7 +4,7 @@ services:
     image: lovelysystems/rabbitmq-swarm-cluster
     hostname: "{{.Service.Name}}.{{.Task.Slot}}.{{.Task.ID}}"
     deploy:
-      replicas: 2
+      replicas: 5
       restart_policy:
         condition: on-failure
       update_config:
